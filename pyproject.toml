@@ -1,0 +1,21 @@
+[project]
+name = "tts"
+version = "0.1.0"
+description = "MeloTTS API & Streaming Service"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "modelscope>=1.37.1",
+    "setuptools<82.0.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.20.0",
+    "soxr",
+    "melotts @ git+https://github.com/myshell-ai/MeloTTS.git",
+]
+
+[tool.uv]
+override-dependencies = [
+    "fugashi>=1.3.0",
+    "mecab-python3>=1.0.9",
+    "transformers>=4.27.4",
+]
