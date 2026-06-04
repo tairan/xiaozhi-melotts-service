@@ -57,6 +57,14 @@ Accepts standard OpenAI format payloads, enabling dropping this server directly 
 
 To run this application as a daemon on production Linux servers (restarting on failures and starting automatically on system boot):
 
+> [!NOTE]
+> **在国内服务器访问 GitHub 遇到网络问题的解决方案**：
+> 如果您的服务器在执行 `uv sync` 时遇到连接 `github.com` 超时或失败，建议在终端中配置 Git 全局代理代理替换：
+> ```bash
+> git config --global url."https://mirror.ghproxy.com/https://github.com/".insteadOf "https://github.com/"
+> ```
+> 配置后，Git 会在后台自动将 GitHub 依赖拉取转向国内的代理镜像，无需修改任何项目代码文件。
+
 1.  Synchronize the environment dependencies first:
     ```bash
     uv sync
