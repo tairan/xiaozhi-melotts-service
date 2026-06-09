@@ -14,6 +14,9 @@ dependencies = [
 ]
 
 [tool.uv]
+exclude-dependencies = [
+    "unidic",
+]
 override-dependencies = [
     "fugashi>=1.3.0",
     "mecab-python3>=1.0.9",
